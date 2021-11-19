@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
 
   const [itemsList, setItemsList] = useState([]);
 
+  const [value, setValue] = useState("");
+
   const addItem = () => {
     Axios.post("https://termproject4.herokuapp.com/create", {
       title: title,
@@ -16,6 +18,7 @@ function App() {
       due: due,
     }).then(() => {
       console.log("success");
+      getItems();
     });
   };
 
@@ -27,6 +30,10 @@ function App() {
       }
     );
   };
+
+  useEffect(() => {
+    getItems();
+  }, []);
 
   return (
     <div className="App">
@@ -56,10 +63,14 @@ function App() {
       </div>
       <hr />
       <div>
-        <button onClick={getItems}>Show List Items</button>
-
         {itemsList.map((val, key) => {
-          return <div>{val.title}</div>;
+          return (
+            <div className="item">
+              <b>{val.title}</b>
+              <br />
+              {val.description}
+            </div>
+          );
         })}
       </div>
     </div>
