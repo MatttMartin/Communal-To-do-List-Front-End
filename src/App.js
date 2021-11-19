@@ -3,25 +3,27 @@ import { useState } from "react";
 import Axios from "axios";
 
 function App() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [due, setDue] = useState(0);
 
-  const [employeeList, setEmployeeList] = useState([]);
+  const [itemsList, setItemsList] = useState([]);
 
-  const addEmployee = () => {
+  const addItem = () => {
     Axios.post("https://termproject4.herokuapp.com/create", {
-      name: name,
-      age: age,
+      title: title,
+      description: description,
+      due: due,
     }).then(() => {
       console.log("success");
     });
   };
 
-  const getEmployees = () => {
-    Axios.get("https://termproject4.herokuapp.com/employees").then(
+  const getItems = () => {
+    Axios.get("https://termproject4.herokuapp.com/listItems").then(
       (response) => {
         console.log(response);
-        setEmployeeList(response.data);
+        setItemsList(response.data);
       }
     );
   };
@@ -29,28 +31,35 @@ function App() {
   return (
     <div className="App">
       <div>
-        <label>Name: </label>
+        <label>Title: </label>
         <input
           type="text"
           onChange={(event) => {
-            setName(event.target.value);
+            setTitle(event.target.value);
           }}
         />
-        <label>Age: </label>
+        <label>Description: </label>
         <input
-          type="number"
+          type="text"
           onChange={(event) => {
-            setAge(event.target.value);
+            setDescription(event.target.value);
           }}
         />
-        <button onClick={addEmployee}>Add Person</button>
+        <label>Due: </label>
+        <input
+          type="date"
+          onChange={(event) => {
+            setDue(event.target.value);
+          }}
+        />
+        <button onClick={addItem}>Add List Item</button>
       </div>
       <hr />
       <div>
-        <button onClick={getEmployees}>Show Employees</button>
+        <button onClick={getItems}>Show List Items</button>
 
-        {employeeList.map((val, key) => {
-          return <div>{val.name}</div>;
+        {itemsList.map((val, key) => {
+          return <div>{val.title}</div>;
         })}
       </div>
     </div>
