@@ -38,7 +38,7 @@ function App() {
 
   const deleteItem = (id) => {
     //console.log(id);
-    Axios.delete(`http://termproject4.herokuapp.com/delete/${id}`).then(
+    Axios.delete(`http://termproject4.herokuapp.com/delete/${id}/`).then(
       (response) => {
         // this only runs on success
         console.log("RESPONSE FROM POST", response.data);
