@@ -19,6 +19,15 @@ button {
   cursor: pointer;
 }
 
+button.deleteButton {
+  width: 20%;
+  background-color: red;
+}
+
+button.deleteButton:hover {
+  background-color: darkred;
+}
+
 button:hover {
   background-color: #45a049;
 }
@@ -33,4 +42,5 @@ div {
   border: 1px solid black;
   margin-top: 5px;
   background-color: aliceblue;
+  width: 100%;
 }

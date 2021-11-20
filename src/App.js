@@ -9,8 +9,6 @@ function App() {
 
   const [itemsList, setItemsList] = useState([]);
 
-  const [value, setValue] = useState("");
-
   const addItem = () => {
     Axios.post("https://termproject4.herokuapp.com/create", {
       title: title,
@@ -20,13 +18,35 @@ function App() {
       console.log("success");
       getItems();
     });
+    clearInputs();
   };
 
   const getItems = () => {
     Axios.get("https://termproject4.herokuapp.com/listItems").then(
       (response) => {
-        console.log(response);
+        //console.log(response);
         setItemsList(response.data);
+      }
+    );
+  };
+
+  const clearInputs = () => {
+    setTitle("");
+    setDescription("");
+    setDue(0);
+  };
+
+  const deleteItem = (id) => {
+    //console.log(id);
+    Axios.delete(`http://termproject4.herokuapp.com/delete/${id}`).then(
+      (response) => {
+        // this only runs on success
+        console.log("RESPONSE FROM POST", response.data);
+        getItems();
+      },
+      (err) => {
+        // this only runs on error
+        console.log("Error While Posting Data", err);
       }
     );
   };
@@ -38,9 +58,11 @@ function App() {
   return (
     <div className="App">
       <div>
+        <h1>Welcome to the communal to-do list! Add a list item!</h1>
         <label>Title: </label>
         <input
           type="text"
+          value={title}
           onChange={(event) => {
             setTitle(event.target.value);
           }}
@@ -48,6 +70,7 @@ function App() {
         <label>Description: </label>
         <input
           type="text"
+          value={description}
           onChange={(event) => {
             setDescription(event.target.value);
           }}
@@ -55,6 +78,7 @@ function App() {
         <label>Due: </label>
         <input
           type="date"
+          value={due}
           onChange={(event) => {
             setDue(event.target.value);
           }}
@@ -68,7 +92,16 @@ function App() {
             <div className="item">
               <b>{val.title}</b>
               <br />
-              {val.description}
+              <p>{val.description}</p>
+              <p>Due: {val.due.slice(0, 10)}</p>
+              <button
+                className="deleteButton"
+                onClick={() => {
+                  deleteItem(val.id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           );
         })}
