@@ -44,3 +44,13 @@ div {
   background-color: aliceblue;
   width: 100%;
 }
+
+.navLink {
+  padding: 10px;
+  margin: 1px;
+  background-color: rgb(185, 184, 184);
+}
+
+.navLink:hover {
+  background-color: rgb(185, 184, 184);
+}
