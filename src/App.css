@@ -48,6 +48,7 @@ div {
 .navLink {
   padding: 10px;
   margin: 1px;
+  display: inline-block;
   background-color: rgb(185, 184, 184);
 }
 
@@ -58,4 +59,14 @@ div {
 h2,
 h3 {
   margin-top: 25px;
+}
+
+img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.code {
+  background-color: grey;
+  margin: 15px;
 }

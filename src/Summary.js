@@ -1,6 +1,6 @@
 import React from "react";
-import graph from "./graph.jfif";
-import graph2 from "./graph2.png";
+import graph from "./photos/graph.jfif";
+import graph2 from "./photos/graph2.png";
 
 function Summary() {
   return (
