@@ -20,6 +20,14 @@ function Tutorial() {
         create-react-app ."
       </p>
       <img src={creatingApp} alt="creatingApp.png" />
+      <p>This will generate all of the files we need to get started.</p>
+      <h3>Set-up Server Folder</h3>
+      <p>
+        In your cmd, navigate to the server folder, then type the command "npm
+        init". This will prompt a bunch of quesitons, just press enter past each
+        one.
+      </p>
+      <p>After that, type the command "npm install mysql express".</p>
     </div>
   );
 }
