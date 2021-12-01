@@ -54,3 +54,7 @@ div {
 .navLink:hover {
   background-color: rgb(185, 184, 184);
 }
+
+img {
+  margin: 20px;
+}
