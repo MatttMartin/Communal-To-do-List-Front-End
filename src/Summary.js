@@ -1,5 +1,6 @@
 import React from "react";
 import graph from "./graph.jfif";
+import graph2 from "./graph2.png";
 
 function Summary() {
   return (
@@ -61,10 +62,33 @@ function Summary() {
       <br />
       <h1>Summary of Node.js</h1>
       <h2>What is Node.js?</h2>
+      <p>
+        Node.js is a backend and frontend development technology created in 2009
+        which runs on the V8 JavaScript runtime engine. (4)
+      </p>
       <h2>Popularity</h2>
+      <p>
+        Node.js is ranked first in terms of use by professional developers
+        compared to other similar software (5).
+      </p>
+      <img src={graph2} alt="graph2.png" />
       <h2>Strengths</h2>
+      Node.js is simple to learn, scalable, intuitive, and fast. Node.js also
+      takes advantage of caching to store data, which makes it even faster (6).
       <h2>Weaknesses</h2>
+      Node.js does not have many obvious weaknesses for a project of this size,
+      but Node.js applications will have worse performance when faced with heavy
+      computing tasks (7).
       <h2>Who uses Node.js?</h2>
+      <p>Some examples of websites that use Node.js (8): </p>
+      <ul>
+        <li>LinkedIn</li>
+        <li>Netflix</li>
+        <li>Uber</li>
+        <li>eBay</li>
+        <li>PayPal</li>
+        <li>Trello</li>
+      </ul>
     </div>
   );
 }

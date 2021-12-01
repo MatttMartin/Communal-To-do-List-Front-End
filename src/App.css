@@ -55,6 +55,7 @@ div {
   background-color: rgb(185, 184, 184);
 }
 
-img {
-  margin: 20px;
+h2,
+h3 {
+  margin-top: 25px;
 }
