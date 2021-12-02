@@ -10,6 +10,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <Router>
+      <h1>CPS 530 Term Project</h1>
+      <h4>Matthew Martin</h4>
+      <hr />
       <nav>
         <Link class="navLink" to="/Summary">
           Summary

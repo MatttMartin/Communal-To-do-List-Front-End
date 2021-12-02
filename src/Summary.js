@@ -10,12 +10,12 @@ function Summary() {
       <p>
         React.js is a component based JavaScript library created by Facebook
         used for front-end development that is capable of creating fast and
-        reactive webpages (1).
+        reactive webpages (Taha Sufiyan).
       </p>
       <h2>Popularity</h2>
       <p>
         In 2021, React.js is the most popular web framework in the world, used
-        by 40.14% of professionals (2).
+        by 40.14% of professionals (Ambika C).
       </p>
       <img src={graph} alt="Graph.jpg" />
       <h2>Strengths</h2>
@@ -45,7 +45,7 @@ function Summary() {
       <h2>Who uses React.js?</h2>
       <p>
         React.js is useful for almost any type of website that has a frontend.
-        Here are some examples (3):
+        Here are some examples (Coder Academy):
       </p>
       <ul>
         <li>Airbnb</li>
@@ -64,23 +64,28 @@ function Summary() {
       <h2>What is Node.js?</h2>
       <p>
         Node.js is a backend and frontend development technology created in 2009
-        which runs on the V8 JavaScript runtime engine. (4)
+        which runs on the V8 JavaScript runtime engine. (Priyesh Patel)
       </p>
       <h2>Popularity</h2>
       <p>
         Node.js is ranked first in terms of use by professional developers
-        compared to other similar software (5).
+        compared to other similar software (Stack Overflow Developer Survey
+        2020).
       </p>
       <img src={graph2} alt="graph2.png" />
       <h2>Strengths</h2>
       Node.js is simple to learn, scalable, intuitive, and fast. Node.js also
-      takes advantage of caching to store data, which makes it even faster (6).
+      takes advantage of caching to store data, which makes it even faster (Why
+      Is Node.js Wildly Popular among Developers?).
       <h2>Weaknesses</h2>
       Node.js does not have many obvious weaknesses for a project of this size,
       but Node.js applications will have worse performance when faced with heavy
-      computing tasks (7).
+      computing tasks (Tejas Kaneriya).
       <h2>Who uses Node.js?</h2>
-      <p>Some examples of websites that use Node.js (8): </p>
+      <p>
+        Some examples of websites that use Node.js (15 Companies That Use
+        Node.js in 2021 Successfully):{" "}
+      </p>
       <ul>
         <li>LinkedIn</li>
         <li>Netflix</li>
