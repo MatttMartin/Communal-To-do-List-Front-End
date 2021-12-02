@@ -7,21 +7,18 @@ function Credits() {
       <h1>Credits/References</h1>
       <h2>Group Members</h2>
       <div className="groupMember">
-        <div>
-          <h4>Matthew Martin</h4>
+        <h4>Matthew Martin</h4>
 
-          <b>Responsibilities: </b>
-          <ul>
-            <li>Design and creation of demo website</li>
-            <li>
-              Creation of Summary, Installation, Tutorial, Conclusion, and
-              Credits pages.
-            </li>
-          </ul>
-        </div>
-        <div>
-          <img style={{ maxWidth: 100 }} src={me} alt="me.jfif" />
-        </div>
+        <b>Responsibilities: </b>
+        <ul>
+          <li>Design and creation of demo website</li>
+          <li>
+            Creation of Summary, Installation, Tutorial, Conclusion, and Credits
+            pages.
+          </li>
+        </ul>
+
+        <img style={{ width: 100, maxWidth: 100 }} src={me} alt="me.jfif" />
       </div>
       <h2>Works Cited</h2>
       <div style={{ textIndent: -36, paddingLeft: 36 }}>
